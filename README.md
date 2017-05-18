@@ -85,7 +85,7 @@ object returned from the above `GRID` example somewhere to be accessed later:
   ;; Test if a cell is a member of the grid. A cell with negative coordinates, or coordinates that
   ;; fall outside the size of the grid will not be a member. All others will, as we do not support
   ;; sparse grids at this time.
-  (cell-member-p grid (cell 5 5)) ; => T (cell-member-p grid (cell 10 10)) ; => NIL
+  (cell-member-p grid (cell 5 5)) ; => T
 
   ;; Find the distance from one cell to another.
   (cell-distance grid (cell 0 1) (cell 4 4)) ; => 6
@@ -107,7 +107,7 @@ object returned from the above `GRID` example somewhere to be accessed later:
   (cell-from-point grid (vec 166 96)) ; => #(3.0 4.0 0.0)
 
   ;; Get a list of direction vectors from the center of a cell to each of its corners, keyed by an
-  approximate cardinal direction.
+  ;; approximate cardinal direction.
   (cell-corner-directions grid) ; => (:NE #<0.8660254 0.5 0.0> :N #<0.0 1.0 0.0>
                                 ;     :NW #<-0.8660254 0.5 0.0> :SW #<-0.8660254 -0.5 0.0>
                                 ;     :S #<0.0 -1.0 0.0> :SE #<0.8660254 -0.5 0.0>)
